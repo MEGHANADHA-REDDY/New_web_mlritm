@@ -6,6 +6,7 @@ import { Users, BookOpen, Award, Building, Globe, ArrowLeft, Database } from "lu
 import Image from "next/image";
 import Link from "next/link";
 import ContactFooter from "@/components/ContactFooter";
+import DepartmentSidebar from "@/components/DepartmentSidebar";
 
 export default function InformationTechnologyPage() {
   const departmentData = {
@@ -55,6 +56,18 @@ export default function InformationTechnologyPage() {
     ]
   };
 
+  const sidebarItems = [
+    { id: "home", name: "Department Home", href: "/information-technology" },
+    { id: "vision", name: "Vision & Mission", href: "#" },
+    { id: "history", name: "History of the Department", href: "#" },
+    { id: "labs", name: "Laboratories", href: "#" },
+    { id: "faculty", name: "Faculty Profiles", href: "#" },
+    { id: "committees", name: "Departmental Committees", href: "#" },
+    { id: "programs", name: "Programs Offered", href: "#" },
+    { id: "achievements", name: "Achievements", href: "#" },
+    { id: "contact", name: "Contact HOD", href: "#" },
+  ];
+
   return (
     <div className="min-h-screen bg-background pt-40">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -89,16 +102,25 @@ export default function InformationTechnologyPage() {
           </blockquote>
         </motion.div>
 
-        {/* Main Content Grid - Image Left, Text Right */}
+        {/* Main Content Grid with Department Sidebar */}
         <motion.div 
-          className="grid lg:grid-cols-2 gap-12 items-start mb-16"
+          className="grid lg:grid-cols-4 gap-12 items-start mb-16"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {/* Left Column - Image */}
+          {/* Left Sidebar */}
+          <motion.div
+            className="lg:col-span-1 space-y-6"
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <DepartmentSidebar title="Information Technology" items={sidebarItems} />
+          </motion.div>
+          {/* Main Content Area (Image + Content) */}
           <motion.div 
-            className="space-y-6"
+            className="lg:col-start-2 lg:col-span-3 space-y-6"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -136,15 +158,13 @@ export default function InformationTechnologyPage() {
                 </div>
               </div>
             </div>
-          </motion.div>
-
-          {/* Right Column - Content */}
-          <motion.div 
-            className="space-y-8"
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
+            {/* Right Column - Content */}
+            <motion.div 
+              className="space-y-8"
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
             {/* Overview */}
             <div>
               <h2 className="text-2xl font-semibold text-foreground mb-4 flex items-center gap-2">
@@ -199,6 +219,7 @@ export default function InformationTechnologyPage() {
                 ))}
               </ul>
             </div>
+            </motion.div>
           </motion.div>
         </motion.div>
 

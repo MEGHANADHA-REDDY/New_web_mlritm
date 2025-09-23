@@ -133,11 +133,11 @@ export default function NavigationHeader() {
       name: "Research & Development",
       href: "#research",
       children: [
-        { name: "Research Objectives", href: "#research-objectives" },
-        { name: "Research Supervisors", href: "#research-supervisors" },
-        { name: "Consultancy", href: "#consultancy" },
-        { name: "Patents", href: "#patents" },
-        { name: "Funding Projects", href: "#funding-projects" },
+        { name: "Research Objectives", href: "/research-objectives" },
+        { name: "Research Supervisors", href: "/research-supervisors" },
+        { name: "Consultancy", href: "/consultancy" },
+        { name: "Patents", href: "/patents" },
+        { name: "Funding Projects", href: "/funding-projects" },
         { name: "Inspiring Innovation", href: "#inspiring-innovation" },
       ]
     },

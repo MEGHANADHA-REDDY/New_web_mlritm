@@ -124,29 +124,25 @@ export default function ComputerScienceEngineeringPage() {
   transition={{ duration: 0.8, delay: 0.4 }}
 >
   {/* The main card container */}
-  <div className="menucss border-4 border-gray-200 rounded-xl p-0 radius overflow-hidden shadow-2xl">
-    {/* Heading with icon */}
-    <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
-      <BookOpen className="w-5 h-5 text-primary" />
-      Computer Science & Engineering
-    </h3>
-    {/* List container with vertical spacing */}
-    <ul className="menucss space-y-5 p-7">
+  <div className="border border-gray-300 rounded-md overflow-hidden shadow-sm">
+    {/* Header bar */}
+    <div className="bg-[#127fa5] text-white px-4 py-2 flex items-center gap-2">
+      <BookOpen className="w-4 h-4 text-white" />
+      <h3 className="text-base font-semibold tracking-wide">Computer Science and Engineering</h3>
+    </div>
+    {/* List container with compact spacing */}
+    <ul className="p-4 space-y-2">
       {departmentData.DepartmentMenu.map((menuItem, index) => (
         <motion.li
           key={menuItem.id}
-          className="flex items-center gap-3 text-muted-foreground"
+          className="group flex items-center gap-2 text-foreground/80 rounded-md px-2 py-1 border border-transparent hover:border-gray-300 hover:bg-gray-50 hover:shadow-sm transition-colors"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+          transition={{ duration: 0.5, delay: 0.8 + index * 0.06 }}
         >
-          {/* The bullet point */}
-          <span className="menucss w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
-          {/* The menu link */}
-          <Link
-            href={menuItem.href}
-            className="text-base transition-colors"
-          >
+          {/* small bullet */}
+          <span className="w-1.5 h-1.5 bg-primary rounded-sm flex-shrink-0 group-hover:scale-110 transition-transform"></span>
+          <Link href={menuItem.href} className="text-sm px-1 py-0.5 rounded group-hover:text-primary group-hover:underline underline-offset-2 transition-colors">
             {menuItem.name}
           </Link>
         </motion.li>
