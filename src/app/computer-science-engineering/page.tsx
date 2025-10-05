@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import FacultySection from "@/components/FacultySection";
 import ContactFooter from "@/components/ContactFooter";
+import DepartmentPlacementSection from "@/components/DepartmentPlacementSection";
 import { id } from "date-fns/locale";
 
 export default function ComputerScienceEngineeringPage() {
@@ -72,6 +73,90 @@ export default function ComputerScienceEngineeringPage() {
       "Winner of national and international programming competitions",
       "Active participation in professional bodies like ACM, IEEE",
       "Collaboration with international universities for research and exchange programs"
+    ]
+  };
+
+  const placementData = {
+    notifications: [
+      {
+        id: "1",
+        title: "Google Campus Drive - CSE Department",
+        date: "2024-12-15",
+        description: "Google is conducting campus placement drive for Software Engineer roles in CSE department"
+      },
+      {
+        id: "2",
+        title: "Microsoft Placement Drive Schedule",
+        date: "2024-12-10",
+        description: "Microsoft campus drive scheduled for December 20th, 2024 for CSE students"
+      },
+      {
+        id: "3",
+        title: "Amazon Interview Process - CSE",
+        date: "2024-12-05",
+        description: "Amazon interview process details and preparation guidelines for CSE students"
+      }
+    ],
+    reviews: [
+      {
+        id: "1",
+        title: "Google Interview Experience - CSE Alumni",
+        date: "2024-11-28",
+        description: "Read about the Google interview process and preparation tips from our CSE alumni"
+      },
+      {
+        id: "2",
+        title: "Microsoft Placement Review 2024",
+        date: "2024-11-20",
+        description: "Comprehensive review of Microsoft placement process and success stories"
+      }
+    ],
+    selectedStudents: [
+      {
+        year: "2019-21",
+        totalStudents: 120,
+        placedStudents: 96,
+        placementRate: 80,
+        avgPackage: "₹6.2 LPA",
+        highestPackage: "₹25 LPA",
+        topCompanies: ["TCS", "Infosys", "Wipro", "Cognizant", "Tech Mahindra"]
+      },
+      {
+        year: "2021-22",
+        totalStudents: 135,
+        placedStudents: 108,
+        placementRate: 80,
+        avgPackage: "₹6.8 LPA",
+        highestPackage: "₹28 LPA",
+        topCompanies: ["TCS", "Infosys", "Wipro", "Cognizant", "HCL"]
+      },
+      {
+        year: "2022-23",
+        totalStudents: 150,
+        placedStudents: 128,
+        placementRate: 85,
+        avgPackage: "₹7.2 LPA",
+        highestPackage: "₹32 LPA",
+        topCompanies: ["TCS", "Infosys", "Wipro", "Cognizant", "Accenture"]
+      },
+      {
+        year: "2023-24",
+        totalStudents: 160,
+        placedStudents: 144,
+        placementRate: 90,
+        avgPackage: "₹7.8 LPA",
+        highestPackage: "₹38 LPA",
+        topCompanies: ["Microsoft", "Amazon", "TCS", "Infosys", "Wipro"]
+      },
+      {
+        year: "2024-25",
+        totalStudents: 170,
+        placedStudents: 160,
+        placementRate: 94,
+        avgPackage: "₹8.5 LPA",
+        highestPackage: "₹45 LPA",
+        topCompanies: ["Amazon", "Microsoft", "Google", "TCS", "Infosys"]
+      }
     ]
   };
 
@@ -354,6 +439,12 @@ export default function ComputerScienceEngineeringPage() {
             ))}
           </div>
         </motion.div>      
+
+        {/* Placement Section */}
+        <DepartmentPlacementSection 
+          departmentName="Computer Science & Engineering"
+          placementData={placementData}
+        />
 
       </div>
  

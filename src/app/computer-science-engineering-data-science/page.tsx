@@ -6,6 +6,7 @@ import { Users, BookOpen, Award, Building, Globe, ArrowLeft, BarChart3 } from "l
 import Image from "next/image";
 import Link from "next/link";
 import ContactFooter from "@/components/ContactFooter";
+import DepartmentPlacementSection from "@/components/DepartmentPlacementSection";
 import DepartmentSidebar from "@/components/DepartmentSidebar";
 
 export default function ComputerScienceEngineeringDataSciencePage() {
@@ -54,6 +55,90 @@ export default function ComputerScienceEngineeringDataSciencePage() {
       "Winner of national and international data science competitions and hackathons",
       "Active participation in professional bodies like ACM, IEEE",
       "Collaboration with international universities for data science research"
+    ]
+  };
+
+  const placementData = {
+    notifications: [
+      {
+        id: "1",
+        title: "Google Data Science Campus Drive",
+        date: "2024-12-15",
+        description: "Google is conducting campus placement drive for Data Scientist roles"
+      },
+      {
+        id: "2",
+        title: "Microsoft Analytics Placement Drive",
+        date: "2024-12-10",
+        description: "Microsoft Analytics campus drive scheduled for December 25th, 2024"
+      },
+      {
+        id: "3",
+        title: "Amazon Data Science Interview Process",
+        date: "2024-12-05",
+        description: "Amazon Data Science interview process details and preparation guidelines"
+      }
+    ],
+    reviews: [
+      {
+        id: "1",
+        title: "Google Data Science Interview Experience",
+        date: "2024-11-28",
+        description: "Read about the Google Data Science interview process and preparation tips"
+      },
+      {
+        id: "2",
+        title: "Microsoft Analytics Placement Review 2024",
+        date: "2024-11-20",
+        description: "Comprehensive review of Microsoft Analytics placement process"
+      }
+    ],
+    selectedStudents: [
+      {
+        year: "2019-21",
+        totalStudents: 50,
+        placedStudents: 40,
+        placementRate: 80,
+        avgPackage: "₹7.5 LPA",
+        highestPackage: "₹30 LPA",
+        topCompanies: ["TCS", "Infosys", "Wipro", "Cognizant", "Tech Mahindra"]
+      },
+      {
+        year: "2021-22",
+        totalStudents: 55,
+        placedStudents: 44,
+        placementRate: 80,
+        avgPackage: "₹8.2 LPA",
+        highestPackage: "₹35 LPA",
+        topCompanies: ["TCS", "Infosys", "Wipro", "Cognizant", "HCL"]
+      },
+      {
+        year: "2022-23",
+        totalStudents: 60,
+        placedStudents: 52,
+        placementRate: 87,
+        avgPackage: "₹8.8 LPA",
+        highestPackage: "₹38 LPA",
+        topCompanies: ["TCS", "Infosys", "Wipro", "Cognizant", "Accenture"]
+      },
+      {
+        year: "2023-24",
+        totalStudents: 65,
+        placedStudents: 59,
+        placementRate: 91,
+        avgPackage: "₹9.5 LPA",
+        highestPackage: "₹42 LPA",
+        topCompanies: ["Microsoft", "Amazon", "TCS", "Infosys", "Wipro"]
+      },
+      {
+        year: "2024-25",
+        totalStudents: 70,
+        placedStudents: 66,
+        placementRate: 94,
+        avgPackage: "₹10.8 LPA",
+        highestPackage: "₹50 LPA",
+        topCompanies: ["Amazon", "Microsoft", "Google", "TCS", "Infosys"]
+      }
     ]
   };
 
@@ -318,6 +403,12 @@ export default function ComputerScienceEngineeringDataSciencePage() {
             ))}
           </div>
         </motion.div>
+
+        {/* Placement Section */}
+        <DepartmentPlacementSection 
+          departmentName="Computer Science & Engineering (Data Science)"
+          placementData={placementData}
+        />
 
       </div>
 

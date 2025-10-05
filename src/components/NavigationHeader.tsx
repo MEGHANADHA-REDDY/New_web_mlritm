@@ -179,7 +179,17 @@ export default function NavigationHeader() {
     },
     {
       name: "Placements",
-      href: "#placements"
+      href: "/placements",
+      children: [
+        { name: "Objectives of Training & Placement", href: "/placements#objectives" },
+        { name: "Placement Notifications", href: "/placements#notifications" },
+        { name: "Placement Reviews", href: "/placements#reviews" },
+        { name: "Selected Students 2019-21", href: "/placements#2019-21" },
+        { name: "Students Selected in 2021-22", href: "/placements#2021-22" },
+        { name: "Selected Students 2022-23", href: "/placements#2022-23" },
+        { name: "Students Selected in 2023-24", href: "/placements#2023-24" },
+        { name: "Students Selected in 2024-25", href: "/placements#2024-25" }
+      ]
     },
     {
       name: "Campus News",
