@@ -156,25 +156,18 @@ export default function NavigationHeader() {
     },
     {
       name: "Campus Life",
-      href: "#campus-life",
+      href: "/campus-life",
       children: [
-        { name: "Activities", href: "#campus-activities" },
-        {
-          name: "Facilities",
-          href: "#campus-facilities",
-          children: [
-            { name: "Library", href: "#facility-library" },
-            { name: "Transport", href: "#facility-transport" },
-            { name: "Hostels", href: "#facility-hostels" },
-            { name: "Computer Centers", href: "#facility-computer-centers" },
-            { name: "Auditorium", href: "#facility-auditorium" },
-            { name: "Health Center", href: "#facility-health-center" },
-            { name: "Cafeteria", href: "#facility-cafeteria" },
-          ]
-        },
-        { name: "Alumini", href: "#alumni" },
-        { name: "Campus Radio", href: "#campus-radio" },
-        { name: "Anti Ragging", href: "#anti-ragging" },
+        { name: "Activities", href: "/campus-life#activities" },
+        { name: "Facilities", href: "/campus-life#facilities" },
+        { name: "Antiragging", href: "/campus-life#antiragging" },
+        { name: "NSS", href: "/campus-life#nss" },
+        { name: "Alumni", href: "/campus-life#alumni" },
+        { name: "Campus Radio", href: "/campus-life#campus-radio" },
+        { name: "Gallery", href: "/campus-life#gallery" },
+        { name: "RTI", href: "/campus-life#rti" },
+        { name: "IIC", href: "/campus-life#iic" },
+        { name: "RAL", href: "/campus-life#ral" },
       ]
     },
     {
