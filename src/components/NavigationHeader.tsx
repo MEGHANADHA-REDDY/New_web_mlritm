@@ -143,15 +143,15 @@ export default function NavigationHeader() {
     },
     {
       name: "Examination Cell",
-      href: "#examination",
+      href: "/examination-cell",
       children: [
-        { name: "Exam Schedules", href: "#exam-schedules" },
-        { name: "Examination Procedures", href: "#examination-procedures" },
-        { name: "Circular / Notifications", href: "#exam-circulars" },
-        { name: "Exam Downloads", href: "#exam-downloads" },
-        { name: "Previous Question Papers", href: "#previous-papers" },
-        { name: "Credit Promotion Rules", href: "#credit-promotion-rules" },
-        { name: "End Examination Result", href: "#end-exam-result" },
+        { name: "Exam Schedules", href: "/examination-cell#schedules" },
+        { name: "Examination Procedures", href: "/examination-cell#procedures" },
+        { name: "Circular / Notifications", href: "/examination-cell#circulars" },
+        { name: "Exam Downloads", href: "/examination-cell#downloads" },
+        { name: "Previous Question Papers", href: "/examination-cell#question-papers" },
+        { name: "Credit Promotion Rules", href: "/examination-cell#credit-rules" },
+        { name: "End Examination Result", href: "/examination-cell#exam-results" },
       ]
     },
     {
@@ -195,7 +195,7 @@ export default function NavigationHeader() {
         { name: "Scholarships", href: "#news-scholarships" },
       ]
     },
-    { name: "Contact Us", href: "#contact" },
+    { name: "Contact Us", href: "/contact" },
   ];
 
   const handleNavLinkClick = (href: string) => {
